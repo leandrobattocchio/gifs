@@ -1,0 +1,8 @@
+
+.App-main {
+  background-color: #101011;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+

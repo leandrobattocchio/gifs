@@ -1,0 +1,5 @@
+a:focus, a:hover, a:visited, a:link, a:active {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
