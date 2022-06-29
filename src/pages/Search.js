@@ -21,7 +21,7 @@ export const Search = () => {
     if(isNearScreen) handleDebounceIt() 
   }, [handleDebounceIt, isNearScreen]);
 
-  if (Object.entries(gifs).length < 10) {
+  if (Object.entries(gifs).length < 15) {
     listaMin = true;
   }
 

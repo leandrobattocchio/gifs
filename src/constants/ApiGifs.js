@@ -7,7 +7,7 @@ export const ApiGifs = {
   REQUEST_TRENDING: function () {
     return `${this.URL}/gifs/trending?api_key=${this.KEY}&limit=5&rating=g`;
   },
-  REQUEST_URL: function ({keyword, limit = 10, page = 0} = {}) {
+  REQUEST_URL: function ({keyword, limit = 15, page = 0} = {}) {
     return `${this.URL}/gifs/search?api_key=${this.KEY}&q=${keyword}&limit=${limit}&offset=${page * limit}&rating=g&lang=en`;
   },
 };
