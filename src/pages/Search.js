@@ -1,16 +1,27 @@
 import { ListaGifs } from "components/listagifs/ListaGifs";
 import { useGifs } from "hooks/useGifs";
-import React from "react";
+import React, {useCallback, useEffect, useRef} from "react";
 import { useParams } from "react-router";
-import { ButtonGifs } from "components/nextgifsbutton/ButtonGifs";
+import {useNearScreen}  from "hooks/useNearScreen";
 import "./Search.css";
+import debounce from 'just-throttle';
 
 export const Search = () => {
   const { keyword } = useParams();
+  const externalRef = useRef();
   const { gifs, loading, setPages } = useGifs(keyword);
   let listaMin;
 
-  if (Object.entries(gifs).length < 26) {
+  const {isNearScreen} = useNearScreen({externalRef: loading ? null : externalRef, once: false});
+
+  const handleDebounceIt = useCallback(debounce(()=> setPages(prevPages => prevPages + 1), 1000, {leading: true}), [setPages]); 
+
+
+  useEffect(function(){
+    if(isNearScreen) handleDebounceIt() 
+  }, [handleDebounceIt, isNearScreen]);
+
+  if (Object.entries(gifs).length < 10) {
     listaMin = true;
   }
 
@@ -24,7 +35,7 @@ export const Search = () => {
         {listaMin ? (
           <h1 className="title">No hay más gifs para mostrar</h1>
         ) : (
-          <ButtonGifs setPages={setPages} />
+          <div id="chivato" ref={externalRef}></div>
         )}
       </div>
     );
