@@ -1,5 +1,5 @@
 import React from "react";
-import { Gif } from "components/gif/Gif";
+import  Gif  from "components/gif/Gif";
 import "./ListaGifs.css";
 
 export const ListaGifs = ({ loading, gifs }) => {

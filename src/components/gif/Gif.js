@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export const Gif = ({ title, url, id } = {}) => {
+function Gif ({ title, url, id } = {}) {
   const gif = id;
 
   if (!title || title === " ") {
@@ -20,3 +20,5 @@ export const Gif = ({ title, url, id } = {}) => {
     </Link>
   );
 };
+
+export default React.memo(Gif)

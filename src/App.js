@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/gif/:gif/:title" element={<VerGif />} />
           <Route path="/" element={<Inicio />} />
+          <Route path="/gif/:gif/:title" element={<VerGif />} />
           <Route path="*" element={<Error />} />
           <Route path="/search/:keyword" element={<Search />} />
         </Routes>
