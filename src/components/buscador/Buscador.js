@@ -3,11 +3,10 @@ import { useNavigate } from "react-router";
 import { RatingAndLanguages } from "constants/RatingAndLanguages";
 import { useForm } from "hooks/useForm";
 
-export const Buscador = (initialKeyword = 'null', initialRating = 'g', initialLanguage = 'en') => {
+export const Buscador = ({initialKeyword, initialRating , initialLanguage}) => {
   const navigate = useNavigate();
 
-  const {keyword, rating, language, updateKeyword, updateRating, updateLanguage} = useForm(initialKeyword = 'null', initialRating = 'g', initialLanguage = 'en');
- 
+  const {keyword, rating, language, updateKeyword, updateRating, updateLanguage} = useForm(initialKeyword, initialRating, initialLanguage);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -33,7 +32,7 @@ export const Buscador = (initialKeyword = 'null', initialRating = 'g', initialLa
         style={{ marginLeft:"20%", marginTop:"2%", padding: "20px", display: "inline-flex", width: "60%"}}
         role="search"
       >
-        <input type="text" placeholder="Search..." aria-label="Search" class="form-control" onChange={handleChangeKeyword}/>
+        <input type="text" placeholder="Search..." aria-label="Search" class="form-control" onChange={handleChangeKeyword} value={keyword}/>
 
         <select onChange={handleChangeRating} value={rating} class="nav-item dropdown">
           {RatingAndLanguages.RATINGS.map((rating) => (

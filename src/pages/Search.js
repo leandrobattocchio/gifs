@@ -51,7 +51,7 @@ export const Search = () => {
           <title>{`${gifs.length} resultados de búsqueda`}</title>
           <meta name="description" content={`${gifs.length} resultados de busqueda`} />
         </Helmet>
-        <Buscador />
+        <Buscador initialKeyword={keyword} initialRating={rating} initialLanguage={languages}/>
         <h1 className="titulo">{`Resultados de gifs sobre ${keyword}`}</h1>
         <ListaGifs gifs={gifs} loading={loading} />
         {listaMin ? (
