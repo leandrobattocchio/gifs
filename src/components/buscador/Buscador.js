@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { RatingAndLanguages } from "constants/RatingAndLanguages";
 import { useForm } from "hooks/useForm";
 
-export const Buscador = ({initialKeyword, initialRating , initialLanguage}) => {
+export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage = 'en'}) => {
   const navigate = useNavigate();
 
   const {keyword, rating, language, updateKeyword, updateRating, updateLanguage} = useForm(initialKeyword, initialRating, initialLanguage);
