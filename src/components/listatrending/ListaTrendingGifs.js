@@ -15,7 +15,7 @@ export default function ListaTrending() {
     const lista = trendingGifs.map((title) => {
       return (
         <div key={title.title} className="trending-gifs">
-          <Link to={`/search/${title.title}`}>
+          <Link to={`/search/${title.title}/g/en`}>
             <b>{title.title}</b>
           </Link>
           <br />
