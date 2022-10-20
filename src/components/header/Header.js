@@ -11,15 +11,6 @@ export const Header = () => {
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <Link to={"/"} className="home">Home</Link>
           </ul>
-
-          <div className="text-end">
-            <button type="button" className="btn btn-outline-light me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-warning">
-              Sign-up
-            </button>
-          </div>
         </div>
       </div>
     </header>

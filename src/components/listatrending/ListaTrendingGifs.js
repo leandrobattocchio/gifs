@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import { useGetTrendingGifs } from "hooks/useGifsTrendings";
-import RepeatableTableRows from "components/placeholders/Holder";
+import "components/listatrending/Trending.css";
 
 export default function ListaTrending() {
   const { trendingGifs, loadingTrending } = useGetTrendingGifs();
 
   if (loadingTrending) {
     return (
-      <div>
-        <RepeatableTableRows />
-      </div>
+      <div className="loader"> </div>
     );
   } else {
     const lista = trendingGifs.map((title) => {

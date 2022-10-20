@@ -19,7 +19,7 @@ export const Inicio = () => {
         />
       </Helmet>
       <Buscador />
-      <h1 className="titulo">Ultima búsqueda</h1>
+      <h1 className="title">Ultima búsqueda</h1>
       <ListaGifs gifs={gifs} loading={loading} />
       <LazyTrending />
     </div>

@@ -37,13 +37,14 @@ export const Search = () => {
   if (Object.entries(gifs).length < 16) {
     listaMin = true;
   }
+  
 
   if (loading) {
     <Helmet>
       <title>Cargando...</title>
       <meta name="description" content="Cargando resultados de busqueda..." />
     </Helmet>;
-    return <h1>Cargando...</h1>;
+    return <div className="loader"></div>
   } else {
     return (
       <div className="gifs">
@@ -52,7 +53,7 @@ export const Search = () => {
           <meta name="description" content={`${gifs.length} resultados de busqueda`} />
         </Helmet>
         <Buscador initialKeyword={keyword} initialRating={rating} initialLanguage={languages}/>
-        <h1 className="titulo">{`Resultados de gifs sobre ${keyword}`}</h1>
+        <h1 className="title">{`Resultados de gifs sobre ${keyword}`}</h1>
         <ListaGifs gifs={gifs} loading={loading} />
         {listaMin ? (
           <h1 className="title">No hay más gifs para mostrar</h1>

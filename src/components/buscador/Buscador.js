@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { RatingAndLanguages } from "constants/RatingAndLanguages";
 import { useForm } from "hooks/useForm";
+import './buscador.css'
 
 export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage = 'en'}) => {
   const navigate = useNavigate();
@@ -32,15 +33,15 @@ export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage =
         style={{ marginLeft:"20%", marginTop:"2%", padding: "20px", display: "inline-flex", width: "60%"}}
         role="search"
       >
-        <input type="text" placeholder="Search..." aria-label="Search" class="form-control" onChange={handleChangeKeyword} value={keyword}/>
+        <input type="text" placeholder="Search..." aria-label="Search" className="form-control" onChange={handleChangeKeyword} value={keyword}/>
 
-        <select onChange={handleChangeRating} value={rating} class="nav-item dropdown">
+        <select onChange={handleChangeRating} value={rating} className='selector'>
           {RatingAndLanguages.RATINGS.map((rating) => (
             <option key={rating}>{rating}</option>
           ))}
         </select>
 
-        <select onChange={handleChangeLanguages} value={language} class="nav-item dropdown">
+        <select onChange={handleChangeLanguages} value={language} className='selector'>
           {RatingAndLanguages.LANGUAGES.map((languages) => (
             <option key={languages}>{languages}</option>
           ))}

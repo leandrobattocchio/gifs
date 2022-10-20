@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { useNearScreen } from "hooks/useNearScreen";
 import "components/listatrending/Trending.css";
-import RepeatableTableRows from "components/placeholders/Holder.js";
 
 const ListaTrending = React.lazy(() => import("./ListaTrendingGifs"));
 
@@ -11,8 +10,8 @@ export default function LazyTrending() {
 
   return (
     <div ref={fromRef}>
-      <Suspense fallback={<RepeatableTableRows />}>
-        {isNearScreen ? <ListaTrending /> : <RepeatableTableRows />}
+      <Suspense fallback={<div className="loader"></div>}>
+        {isNearScreen ? <ListaTrending /> : <div className="loader trending" style={{}}></div>}
       </Suspense>
     </div>
   );

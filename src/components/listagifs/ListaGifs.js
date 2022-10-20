@@ -5,9 +5,7 @@ import "./ListaGifs.css";
 export const ListaGifs = ({ loading, gifs }) => {
   if (loading) {
     return (
-      <div className="cargando-inicio">
-        <h1>Cargando...</h1>
-      </div>
+      <div className="loader margin"></div>
     );
   } else {
     if (Object.entries(gifs).length === 0) {

@@ -1,5 +1,5 @@
 
 export const RatingAndLanguages = {
-   RATINGS: ['g', 'pg', 'pg-13', 'r'],
-   LANGUAGES: ['en', 'es', 'pt', 'fr', 'ja', 'ru'],
+   RATINGS: ['G', 'PG', 'PG-13', 'R'],
+   LANGUAGES: ['EN', 'ES', 'PT', 'FR', 'JA', 'RU'],
 };

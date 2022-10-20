@@ -1,5 +1,4 @@
 import "App.css";
-import { Footer } from "components/footer/Footer";
 import { Header } from "components/header/Header";
 import { Inicio } from "pages/Inicio";
 import { Search } from "pages/Search";
@@ -18,7 +17,6 @@ function App() {
           <Route path="*" element={<Error />} />
           <Route path="/search/:keyword/:rating/:languages" element={<Search />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
