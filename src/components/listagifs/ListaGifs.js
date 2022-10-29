@@ -1,7 +1,7 @@
 import React from "react";
 import  Gif  from "components/gif/Gif";
 import "./ListaGifs.css";
-
+import Masonry from '@mui/lab/Masonry';
 export const ListaGifs = ({ loading, gifs }) => {
   if (loading) {
     return (
@@ -12,7 +12,8 @@ export const ListaGifs = ({ loading, gifs }) => {
       return <h1 className="vacio">No se ha encontrado gifs de esta bùsqueda</h1>;
     } else {
       return (
-        <div className="gallery-container">
+        <div className="container">
+            <Masonry columns={3} spacing={2}>
           {gifs.map((singleGif) => (
             <Gif
               title={singleGif.title}
@@ -21,7 +22,9 @@ export const ListaGifs = ({ loading, gifs }) => {
               key={singleGif.id}
             />
           ))}
+        </Masonry>
         </div>
+      
       );
     }
   }
