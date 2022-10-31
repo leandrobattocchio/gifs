@@ -10,7 +10,7 @@ export const Inicio = () => {
   const { gifs, loading } = useGifs();
 
   return (
-    <div>
+    <div className="inicio">
       <Helmet>
         <title>Inicio</title>
         <meta
@@ -19,7 +19,7 @@ export const Inicio = () => {
         />
       </Helmet>
       <Buscador />
-      <h1 className="title">Ultima búsqueda</h1>
+      <h1>Ultima búsqueda</h1>
       <ListaGifs gifs={gifs} loading={loading} />
       <LazyTrending />
     </div>

@@ -7,7 +7,7 @@
 
 .trendings h2{
     animation-name: rainbowTitle;
-	animation-duration: 5s;
+	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear; 
@@ -16,25 +16,6 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-
-
-@keyframes rainbowTitle {
-	0% {
-		color: #ee6055;
-	}
-	25% {
-		color: #60d394;
-	}
-	50% {
-		color: #aaf683;
-	}
-	75% {
-		color: #ffd97d;
-	}
-	100% {
-		color: #ff9b85;
-	}
-}
 .loader {
 	font-size: 10px;
 	width: 1em;
@@ -50,6 +31,22 @@
 	padding-bottom: 200px; 
 	margin-top: 7%; 
 	width: 20px
+  }
+
+  @media only screen and (max-width: 600px) {
+	.trendings h2{
+		font-size: 40px;
+	}
+
+	.trending-gifs{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.trending-gifs b{
+		font-size: 18px;
+	}
+	
   }
 
   @keyframes mulShdSpin {
@@ -79,3 +76,21 @@
 	  box-shadow: 0em -2.6em 0em 0em rgba(255,255,255, 0.2), 1.8em -1.8em 0 0em rgba(255,255,255, 0.2), 2.5em 0em 0 0em rgba(255,255,255, 0.2), 1.75em 1.75em 0 0em rgba(255,255,255, 0.2), 0em 2.5em 0 0em rgba(255,255,255, 0.2), -1.8em 1.8em 0 0em rgba(255,255,255, 0.5), -2.6em 0em 0 0em rgba(255,255,255, 0.7), -1.8em -1.8em 0 0em #c560e3;
 	}
   }
+
+  @keyframes rainbowTitle {
+	0% {
+		color: #ecf862;
+	}
+	25% {
+		color: #eb6b3c;
+	}
+	50% {
+		color: #832c00;
+	}
+	75% {
+		color: #2a59da;
+	}
+	100% {
+		color: #5ae0a6;
+	}
+}

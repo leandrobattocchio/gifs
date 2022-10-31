@@ -1,8 +1,18 @@
 import React from "react";
 import  Gif  from "components/gif/Gif";
 import "./ListaGifs.css";
-import Masonry from '@mui/lab/Masonry';
+import { Container } from "@mui/system";
+import Masonry from "react-masonry-css";
+
+
 export const ListaGifs = ({ loading, gifs }) => {
+  const Columns = {
+    default: 3,
+    1200: 3,
+    1000: 2,
+    700: 1
+  };
+
   if (loading) {
     return (
       <div className="loader margin"></div>
@@ -12,8 +22,12 @@ export const ListaGifs = ({ loading, gifs }) => {
       return <h1 className="vacio">No se ha encontrado gifs de esta bùsqueda</h1>;
     } else {
       return (
-        <div className="container">
-            <Masonry columns={3} spacing={2}>
+        <Container className='space' maxWidth='xl'>
+          <Masonry 
+            breakpointCols={Columns}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column" 
+          >
           {gifs.map((singleGif) => (
             <Gif
               title={singleGif.title}
@@ -22,9 +36,9 @@ export const ListaGifs = ({ loading, gifs }) => {
               key={singleGif.id}
             />
           ))}
-        </Masonry>
-        </div>
-      
+        </Masonry>      
+        </Container>
+            
       );
     }
   }

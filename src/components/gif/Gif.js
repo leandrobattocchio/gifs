@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Gif ({ title, url, id } = {}) {
   const gif = id;
@@ -10,14 +10,15 @@ function Gif ({ title, url, id } = {}) {
   }
 
   return (
+   <div>
     <Link className="gallery-item" to={`/gif/${gif}/${title}`}>
-      <LazyLoadImage
+     <LazyLoadImage
         alt={"gif"}
         src={url} // use normal <img> attributes as props
-        width={"100%"}
+        className='masonry-img'
       />
-      <div className="gif-title">{title}</div>
     </Link>
+    </div>  
   );
 };
 

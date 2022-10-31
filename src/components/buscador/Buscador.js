@@ -33,7 +33,7 @@ export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage =
         style={{ marginLeft:"20%", marginTop:"2%", padding: "20px", display: "inline-flex", width: "60%"}}
         role="search"
       >
-        <input type="text" placeholder="Search..." aria-label="Search" className="form-control" onChange={handleChangeKeyword} value={keyword}/>
+        <input required type="text" placeholder="Search..." aria-label="Search" className="form-control" onChange={handleChangeKeyword} value={keyword}/>
 
         <select onChange={handleChangeRating} value={rating} className='selector'>
           {RatingAndLanguages.RATINGS.map((rating) => (
@@ -46,6 +46,7 @@ export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage =
             <option key={languages}>{languages}</option>
           ))}
         </select>
+        <button>Search</button>
       </form>
     </div>
   );
