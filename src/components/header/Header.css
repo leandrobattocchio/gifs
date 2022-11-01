@@ -3,3 +3,8 @@ a:focus, a:hover, a:visited, a:link, a:active {
     font-size: 25px;
     text-decoration: none;
 }
+
+.logo{
+    min-width: 65px;
+    max-height: 60px;
+}

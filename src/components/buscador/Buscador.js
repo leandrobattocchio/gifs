@@ -46,7 +46,7 @@ export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage =
             <option key={languages}>{languages}</option>
           ))}
         </select>
-        <button>Search</button>
+        <button className="search-button">Search</button>
       </form>
     </div>
   );

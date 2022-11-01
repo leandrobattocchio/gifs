@@ -35,7 +35,7 @@
 
   @media only screen and (max-width: 600px) {
 	.trendings h2{
-		font-size: 40px;
+		font-size: 35px;
 	}
 
 	.trending-gifs{
@@ -44,7 +44,7 @@
 	}
 
 	.trending-gifs b{
-		font-size: 18px;
+		font-size: 15px;
 	}
 	
   }
