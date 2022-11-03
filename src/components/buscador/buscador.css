@@ -39,6 +39,10 @@
         width: 80px;
     }
 
+    .form-group select{
+        background-color: rgb(255, 255, 255);
+    }
+
     .form-group select:last-child {
         margin-right: 20px !important;
     }
