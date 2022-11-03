@@ -2,32 +2,49 @@
     font-family: 'Courier New', Courier, monospace;
     margin: 0 5px; 
     text-align: left;
-    font-family: monospace
+    font-family: monospace;    
 }   
 
-.search-button{
+.search-button button{
     width: 120px;
     height: 50px;
     border-radius: 10px;
     color: white;
-    background-color: rgb(71, 76, 85);
+    background-color: rgb(89, 131, 209);
 }
 
-.form-search{
-    margin-left:"20%"; 
-    margin-top:"2%";
-    padding: "20px";
-    display: "inline-flex";
-    width: "60%"
+.search-button{
+    display: inline-flex;
+}
+
+.search-button button:hover{
+    background-color: rgb(102, 190, 190);
 }
 
 
 @media only screen and (max-width: 600px) {
-    .search-button{
-        width: 120px;
+    .search-button button{
+        width: 80%;
         height: 50px;
         border-radius: 10px;
         color: white;
         background-color: rgb(89, 131, 209);
     }
+    .search-button{
+        display: block;
+        margin-left: 18%;
+    }
+
+    .form-group input{
+        width: 80px;
+    }
+
+    .form-group select:last-child {
+        margin-right: 20px !important;
+    }
+
+    .search-button button:hover{
+        background-color: rgb(102, 190, 190);
+    }
+
 }

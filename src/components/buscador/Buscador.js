@@ -27,27 +27,33 @@ export const Buscador = ({initialKeyword, initialRating = 'g', initialLanguage =
   };
 
   return (
-    <div>
+    <>
       <form
         onSubmit={handleSubmit}
-        style={{ marginLeft:"20%", marginTop:"2%", padding: "20px", display: "inline-flex", width: "60%"}}
         role="search"
       >
-        <input required type="text" placeholder="Search..." aria-label="Search" className="form-control" onChange={handleChangeKeyword} value={keyword}/>
+        <div className="form-group" style={{display: 'inline-flex', marginLeft:"17%", marginTop:"2%", padding: "20px", width: "60%"}}>
+          <input required type="text" placeholder="Search..." aria-label="Search" className="form-control" onChange={handleChangeKeyword} value={keyword}/>
 
-        <select onChange={handleChangeRating} value={rating} className='selector'>
-          {RatingAndLanguages.RATINGS.map((rating) => (
-            <option key={rating}>{rating}</option>
-          ))}
-        </select>
+          <select onChange={handleChangeRating} value={rating} className='selector'>
+            {RatingAndLanguages.RATINGS.map((rating) => (
+              <option key={rating}>{rating}</option>
+            ))}
+          </select>
 
-        <select onChange={handleChangeLanguages} value={language} className='selector'>
-          {RatingAndLanguages.LANGUAGES.map((languages) => (
-            <option key={languages}>{languages}</option>
-          ))}
-        </select>
-        <button className="search-button">Search</button>
+          <select onChange={handleChangeLanguages} value={language} className='selector'>
+            {RatingAndLanguages.LANGUAGES.map((languages) => (
+              <option key={languages}>{languages}</option>
+            ))}
+          </select>
+        </div>
+          
+      
+        <div className="search-button">
+          <button>Search</button>
+        </div>
+        
       </form>
-    </div>
+    </>
   );
 };
