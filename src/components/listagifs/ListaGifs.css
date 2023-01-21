@@ -1,6 +1,27 @@
 .vacio {
+  color: #767276 !important;
   text-align: center;
+  margin-top: 15px;
+  font-size: 45px !important;
 }
+
+.vacio-img{
+  max-width: 480px;
+  max-height: 498px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .vacio-img{
+    max-width: 280px;
+    max-height: 298px;
+  }
+  .vacio{
+    font-size: 20px !important;
+  }
+}
+
 
 .loader {
   font-size: 10px;

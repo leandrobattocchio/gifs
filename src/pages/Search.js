@@ -34,7 +34,7 @@ export const Search = () => {
     [handleDebounceIt, isNearScreen]
   );
 
-  if (Object.entries(gifs).length < 16) {
+  if (Object.entries(gifs).length < 16 && Object.entries(gifs).length !== 0) {
     listaMin = true;
   }
   
@@ -47,7 +47,7 @@ export const Search = () => {
     return <div className="loader"></div>
   } else {
     return (
-      <div className="gifs">
+      <div className="gifs" style={{minHeight: '550px'}}>
         <Helmet>
           <title>{`${gifs.length} resultados de búsqueda`}</title>
           <meta name="description" content={`${gifs.length} resultados de busqueda`} />
